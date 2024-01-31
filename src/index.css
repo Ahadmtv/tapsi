@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* اضافه کردن فونت به پروژه */
+
+@font-face {
+    font-family: 'vazir-bold';
+    src: url('../public/assets/font/Vazir.ttf') format('truetype'),
+        url('../public/assets/font/Vazir-Bold.woff') format('woff'),
+        url('../public/assets/font/Vazir-Bold.woff2') format('woff2'),
+        url('../public/assets/font/Vazir-Bold.eot') format('eot');
+    ;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'vazir-light';
+    src: url('../public/assets/font/Vazir-Light.ttf') format('truetype'),
+        url('../public/assets/font/Vazir-Light.woff') format('woff'),
+        url('../public/assets/font/Vazir-Light.woff2') format('woff2'),
+        url('../public/assets/font/Vazir-Light.eot') format('eot');
+    ;
+}
+
+@font-face {
+    font-family: 'vazir-medium';
+    src: url('../public/assets/font/Vazir-Medium.ttf') format('truetype'),
+        url('../public/assets/font/Vazir-Medium.woff') format('woff'),
+        url('../public/assets/font/Vazir-Medium.woff2') format('woff2'),
+        url('../public/assets/font/Vazir-Medium.eot') format('eot');
+    ;
+}
+
+@font-face {
+    font-family: 'vazir-thin';
+    src: url('../public/assets/font/Vazir-Thin.ttf') format('truetype'),
+        url('../public/assets/font/Vazir-Thin.woff') format('woff'),
+        url('../public/assets/font/Vazir-Thin.woff2') format('woff2'),
+        url('../public/assets/font/Vazir-Thin.eot') format('eot');
+    ;
+}
+
+@font-face {
+    font-family: 'vazir';
+    src: url('../public/assets/font/Vazir.ttf') format('truetype'),
+        url('../public/assets/font/Vazir.woff') format('woff'),
+        url('../public/assets/font/Vazir.woff2') format('woff2'),
+        url('../public/assets/font/Vazir.eot') format('eot');
+    ;
+}
+
+@layer base {
+    html {
+        direction: rtl;
+        box-sizing: border-box;
+        font-family: vazir;
+    }
+
+    .header-secondry {
+        background-image: url(../public/assets/images/banner.webp);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .slider-link {
+        background-image: linear-gradient(51deg, rgba(23, 26, 60, .7) 5%, rgba(23, 26, 60, .3) 95%);
+    }
 }
