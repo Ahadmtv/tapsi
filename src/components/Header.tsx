@@ -2,6 +2,8 @@ import { FC, useState } from "react"
 
 
 const Header: FC = () => {
+    //دکمه باز و بست منو
+
     const [menuToggle, setMenuToggle] = useState<boolean>(false);
     const showMenu = () => {
         setMenuToggle(!menuToggle);
@@ -23,6 +25,9 @@ const Header: FC = () => {
                             </ul>
                             <button className="text-center text-base hidden xl:inline-block bg-tapsi text-white py-2 px-5 rounded-lg hover:-translate-y-1 ease-linear duration-100 mr-2">دانلود تپسی</button>
                         </div>
+
+                        {/* لوگو تپسی */}
+
                         <div className="ml-auto flex justify-center items-center">
                             <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="102" height="22" viewBox="0 0 102 22">
                                 <g fill-rule="evenodd">
@@ -35,13 +40,13 @@ const Header: FC = () => {
                     </div>
                     <div className={`bg-white px-2  w-full ${menuToggle ? "h-230" : "h-0"} transition-[height] lg:hidden`}>
                         <ul>
-                            {/* کلاس شخصی سازی شده  */}
-                            <li className="menu-item "><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/">ویدئو ها</a></li>
-                            <li className="menu-item "><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/shop">پشتیبانی</a></li>
-                            <li className="menu-item "><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/blogs">امور سهام</a></li>
-                            <li className="menu-item "><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/about">تپسی پک</a></li>
-                            <li className="menu-item "><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/contact">فرصت های شغلی</a></li>
-                            <li className="menu-item "><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/contact">وبلاگ</a></li>
+                        
+                            <li><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/">ویدئو ها</a></li>
+                            <li><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/shop">پشتیبانی</a></li>
+                            <li><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/blogs">امور سهام</a></li>
+                            <li><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/about">تپسی پک</a></li>
+                            <li><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/contact">فرصت های شغلی</a></li>
+                            <li><a className="block p-2 h-full hover:text-tapsi font-vazir-thin" href="/contact">وبلاگ</a></li>
                         </ul>
                     </div>
                 </div>

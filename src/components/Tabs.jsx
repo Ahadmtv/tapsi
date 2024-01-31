@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+// ذخیره به شکل یک آرایه
 const tabsData = [
   {
     id: 'classic',
@@ -224,7 +224,7 @@ const tabsData = [
     ),
   },
 ];
-
+///////////////////////////////////////////////////////////////////
 const Tabs = () => {
   const [selectedTab, setSelectedTab] = useState("classic");
 
@@ -233,12 +233,15 @@ const Tabs = () => {
       <h2 className="text-2xl text-center font-bold mb-8" aria-label="services section title">
         سرویس‌های تپسی
       </h2>
+      
+      {/* منوی تب */}
+
       <nav>
         <div className="flex overflow-x-auto space-x-4 p-1 border-b border-gray-200 gap-x-5" id="nav-tab" role="tablist">
           {tabsData.map((tab) => (
             <button
               key={tab.id}
-              className={`flex flex-col justify-center items-center hover:opacity-100 min-w-[100px] flex-1 lg:p-6 p-2 text-center font-medium text-gray-500 hover:text-gray-700 opacity-50 rounded-t-lg ${selectedTab === tab.id ? 'opacity-100' : ''}`}              onClick={() => setSelectedTab(tab.id)}
+              className={`flex flex-col justify-center items-center hover:opacity-100 min-w-[100px] flex-1 lg:p-6 p-2 text-center font-medium text-gray-500 hover:text-gray-700 opacity-50 rounded-t-lg ${selectedTab === tab.id ? 'opacity-100' : ''}`} onClick={() => setSelectedTab(tab.id)}
               id={`nav-${tab.id}-tab`}
               data-toggle="tab"
               aria-controls={`nav-${tab.id}`}
@@ -250,6 +253,9 @@ const Tabs = () => {
           ))}
         </div>
       </nav>
+
+      {/* قسمت کانتنت */}
+      
       <div className="tab-content pt-5" id="nav-tabContent">
         {tabsData.map((tab) => (
           <div

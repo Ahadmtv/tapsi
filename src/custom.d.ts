@@ -1,9 +1,9 @@
-// images.d.ts
+// تعریف پسوند ها 
+
 declare module '*.png' {
     const value: string;
     export default value;
   }
-    // images.d.ts
 declare module '*.jpg' {
   const value: string;
   export default value;
